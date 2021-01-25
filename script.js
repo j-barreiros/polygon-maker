@@ -8,12 +8,12 @@ function setup() {
 }
 
 function draw() {
-    background(250)
+    background('#1a1c20')
     //noFill();
     
     //Draw poligon lines
     beginShape();
-        fill(250)
+        fill('#f0a500');
         poligonPoints.map(point => vertex(point.x, point.y))
     endShape(CLOSE)
     
@@ -24,7 +24,7 @@ function draw() {
             stroke(0)
             //See if the mouse is over the circle
             if(Math.hypot(mouseX - point.x, mouseY - point.y) <= 5){
-                fill(22,33,100);
+                fill(255);
                 if(pressed) {
                     selectedPoint = point;
                 }else{
